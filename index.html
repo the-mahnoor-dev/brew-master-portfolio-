@@ -3,193 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Space Responsive Grid</title>
-    
-    <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="https://cloudflare.com">
-    
-    <style>
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        
-        body {
-            background: #020617; /* Deep Space Black */
-            color: #e2e8f0;
-            font-family: 'Segoe UI', sans-serif;
-            padding: 20px;
-            overflow-x: hidden;
-        }
-
-        /* Background Stars Effect using CSS */
-        body::before {
-            content: "";
-            position: fixed;
-            top: 0; left: 0; width: 100%; height: 100%;
-            background-image: radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 40px);
-            background-size: 200px 200px;
-            opacity: 0.2;
-            z-index: -1;
-        }
-
-        .section-title {
-            text-align: center;
-            margin: 40px 0;
-            font-size: 2rem;
-            text-transform: uppercase;
-            letter-spacing: 5px;
-            color: #38bdf8;
-            text-shadow: 0 0 15px rgba(56, 189, 248, 0.6);
-        }
-
-        /* --- 3 Cards Space Style --- */
-        .card-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            max-width: 1200px;
-            margin: 0 auto 60px;
-        }
-
-        .card {
-            background: rgba(15, 23, 42, 0.8);
-            border: 1px solid #1e293b;
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-            transition: 0.4s;
-            position: relative;
-        }
-
-        .card:hover {
-            transform: translateY(-10px) scale(1.02);
-            border-color: #38bdf8;
-            box-shadow: 0 0 20px rgba(56, 189, 248, 0.3);
-        }
-
-        /* Space Visual Box instead of Image */
-        .space-visual {
-            height: 200px;
-            width: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 4rem;
-            /* Nebula Gradient Effect */
-            background: radial-gradient(circle at center, #1e1b4b 0%, #020617 100%);
-            position: relative;
-        }
-
-        .nebula-1 { background: radial-gradient(circle at 30% 30%, #4338ca 0%, #020617 70%); }
-        .nebula-2 { background: radial-gradient(circle at 70% 40%, #701a75 0%, #020617 70%); }
-        .nebula-3 { background: radial-gradient(circle at 50% 50%, #1e40af 0%, #020617 70%); }
-
-        .card-content { padding: 25px; text-align: center; }
-        .card-content h3 { color: #f8fafc; margin-bottom: 12px; font-size: 1.5rem; }
-        .card-content p { color: #94a3b8; font-size: 0.95rem; line-height: 1.6; }
-
-        .card-btn {
-            margin-top: 20px;
-            padding: 12px;
-            width: 100%;
-            border-radius: 12px;
-            border: 1px solid #38bdf8;
-            background: transparent;
-            color: #38bdf8;
-            font-weight: bold;
-            cursor: pointer;
-            transition: 0.3s;
-        }
-
-        .card-btn:hover { background: #38bdf8; color: #020617; }
-
-        /* --- 3x3 Space Gallery --- */
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 15px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .gallery-item {
-            aspect-ratio: 1/1;
-            background: #111827;
-            border-radius: 15px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border: 1px solid #1e293b;
-            font-size: 1.5rem;
-            color: #38bdf8;
-            transition: 0.3s;
-            /* Starry background inside gallery items */
-            background-image: radial-gradient(circle, #38bdf8 1px, transparent 1px);
-            background-size: 20px 20px;
-        }
-
-        .gallery-item:hover {
-            border-color: #f472b6;
-            color: #f472b6;
-            transform: scale(1.05);
-            background-image: radial-gradient(circle, #f472b6 1px, transparent 1px);
-        }
-
-        @media (max-width: 600px) {
-            .gallery-grid { grid-template-columns: repeat(2, 1fr); }
-            .section-title { font-size: 1.5rem; }
-        }
-    </style>
+    <title>The Caffeine Club | Premium Experience</title>
+    <link href="https://googleapis.com" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <h2 class="section-title">Galactic Services</h2>
-    
-    <div class="card-grid">
-        <!-- Card 1 -->
-        <div class="card">
-            <div class="space-visual nebula-1"><i class="fa-solid fa-user-astronaut"></i></div>
-            <div class="card-content">
-                <h3>Astro-Logic</h3>
-                <p>Advanced data exploration through the deep voids of digital space.</p>
-                <button class="card-btn">Launch Project</button>
-            </div>
+    <header>
+        <nav class="glass-nav">
+            <div class="logo">CAFFEINE<span>CLUB</span></div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#experience">Experience</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="fade-in">Beyond Just <br><span>Coffee.</span></h1>
+            <p class="slide-up">A curated experience for the true connoisseur. Hand-roasted beans, delivered with passion.</p>
+            <a href="#menu" class="cta-button">Explore Selection</a>
         </div>
-
-        <!-- Card 2 -->
-        <div class="card">
-            <div class="space-visual nebula-2"><i class="fa-solid fa-shuttle-space"></i></div>
-            <div class="card-content">
-                <h3>Rocket Speed</h3>
-                <p>Optimizing your systems for light-speed performance and stability.</p>
-                <button class="card-btn">Ignite Engine</button>
-            </div>
+        <div class="floating-img">
+            <!-- Intro Image Set to 1304 -->
+            <img src="IMG_1304.JPG" alt="Premium Coffee Intro">
         </div>
+    </section>
 
-        <!-- Card 3 -->
-        <div class="card">
-            <div class="space-visual nebula-3"><i class="fa-solid fa-satellite"></i></div>
-            <div class="card-content">
-                <h3>Global Comms</h3>
-                <p>Stay connected across galaxies with our satellite-powered networks.</p>
-                <button class="card-btn">Connect Now</button>
-            </div>
+    <section id="menu" class="menu-section">
+        <h2 class="section-title">The Signature Six</h2>
+        <div class="menu-grid">
+            <div class="menu-card"><img src="IMG_1297.JPG" alt="Coffee 1"><div class="card-info"><h3>Velvet Espresso</h3><span class="price">$4.50</span></div></div>
+            <div class="menu-card"><img src="IMG_1298.JPG" alt="Coffee 2"><div class="card-info"><h3>Silk Latte</h3><span class="price">$5.25</span></div></div>
+            <div class="menu-card"><img src="IMG_1299.JPG" alt="Coffee 3"><div class="card-info"><h3>The Cortado</h3><span class="price">$4.00</span></div></div>
+            <div class="menu-card"><img src="IMG_1300.JPG" alt="Coffee 4"><div class="card-info"><h3>Midnight Mocha</h3><span class="price">$6.50</span></div></div>
+            <div class="menu-card"><img src="IMG_1301.JPG" alt="Coffee 5"><div class="card-info"><h3>Flat White</h3><span class="price">$5.00</span></div></div>
+            <div class="menu-card"><img src="IMG_1302.JPG" alt="Coffee 6"><div class="card-info"><h3>Cold Brew</h3><span class="price">$5.75</span></div></div>
         </div>
-    </div>
+    </section>
 
-    <h2 class="section-title">Constellation Gallery</h2>
-    
-    <div class="gallery-grid">
-        <div class="gallery-item"><i class="fa-solid fa-star"></i></div>
-        <div class="gallery-item"><i class="fa-solid fa-moon"></i></div>
-        <div class="gallery-item"><i class="fa-solid fa-earth-americas"></i></div>
-        <div class="gallery-item"><i class="fa-solid fa-meteor"></i></div>
-        <div class="gallery-item"><i class="fa-solid fa-sun"></i></div>
-        <div class="gallery-item"><i class="fa-solid fa-user-astronaut"></i></div>
-        <div class="gallery-item"><i class="fa-solid fa-rocket"></i></div>
-        <div class="gallery-item"><i class="fa-solid fa-satellite-dish"></i></div>
-        <div class="gallery-item"><i class="fa-solid fa-galaxy"></i> <i class="fa-solid fa-atom"></i></div>
-    </div>
-
-    <p style="text-align: center; margin-top: 50px; color: #475569; font-size: 0.8rem;">Space Grid Concept - No Images Required</p>
+    <footer>
+        <p>&copy; 2026 Caffeine Club | Portfolio Project #2</p>
+    </footer>
 
 </body>
 </html>
